@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISBN Reader</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        #interactive.viewport {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            border: 5px solid #ccc;
+            margin-bottom: 20px;
+        }
+        #results {
+            padding: 20px;
+            background: #f0f0f0;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .book-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .book-cover {
+            max-width: 150px;
+            height: auto;
+            border: 1px solid #ccc;
+            padding: 5px;
+            background: #fff;
+        }
+        .book-details {
+            text-align: left;
+        }
+        .book-details h2 {
+            margin: 0 0 10px;
+        }
+        .book-details p {
+            margin: 5px 0;
+        }
+        .book-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .book-link:hover {
+            background-color: #0056b3;
+        }
+        .actions {
+            margin-top: 20px;
+        }
+        .actions button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .actions button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>ISBN Barcode Scanner</h1>
+    <div id="interactive" class="viewport"></div>
+    <div id="results"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
